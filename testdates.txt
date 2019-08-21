@@ -1,0 +1,10 @@
+let date1 = new Date("Aug 14, 2019 18:00:00");
+let date2 = new Date("Aug 14, 2019 18:00:00");
+let date3 = new Date("Aug 14, 2019 18:00:00");
+let date4 = new Date("Aug 14, 2019 18:00:00");
+let date5 = new Date("Aug 14, 2019 18:00:00");
+let date6 = new Date("Aug 14, 2019 18:00:00");
+let date7 = new Date("Nov 14, 2019 18:00:00");
+let today = new Date();
+let now1 = new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes(), today.getSeconds());
+let quizTab = [date1, date2, date3, date4, date5, date6, date7];

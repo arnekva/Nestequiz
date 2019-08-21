@@ -1,0 +1,114 @@
+body{
+  background-color: rgb(39,46,79,1);
+}
+.aricon{
+  margin-left:-20px;
+
+}
+.navbar-brand{
+  padding-left:55px;
+}
+.flaticon-beer::before{
+  font-size:2rem;
+}
+.flaticon-beer{
+  margin-right:20px;
+}
+.ftco-section-parallax2, .parallax-img2{
+
+background: rgb(148,0,0) !important;
+background: linear-gradient(343deg, rgba(148,0,0,1) 2%, rgba(0,1,108,1) 62%) !important;
+}
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.moreinfop{
+  color: #ff5656;
+}
+.flaticon-child::before, .flaticon-face::before{
+  font-size:5rem;
+}
+.ftco-bible-study{
+  margin-top:0px !important;
+  font-size: 3rem;
+}
+.ftco-bible-study .wrap{
+  background-color: rgb(39,46,79,0.95);
+  border-radius: 50px;
+}
+.slider-text p{
+  font-size:2rem;
+  font-weight:600;
+}
+.ftco-bible-study .countdown span{
+
+}
+h3{
+
+font-weight:700;
+}
+.slider-text p{
+  font-weight:800;
+}
+.ftco-bible-study .one-half {
+  margin-left:20px;
+  width:100%;
+  float:right;
+}.ftco-bible-study .one-half .countdown-wrap{
+width:100%;
+}
+@media (max-width: 767.98px){ .ftco-bible-study .one-half .countdown {
+
+margin-left:-20px !important;
+margin-right:-20px !important;
+}
+}
+.ftco-footer{
+padding: 2em 0 2em 0
+}
+.pt{
+font-size:0.9rem !important;
+font-weight:300 !important;
+}
+.pforquiz{
+font-size: 1.3rem !important;
+font-weight: 200 !important;
+}
+.phead{
+font-size: 1.5rem !important;
+font-weight: 600 !important;
+}
+.midt{
+margin: 0 auto;
+position: relative;
+display: inline-block;
+}
+.fulldate{
+margin-top:10px;
+font-size: 3rem;
+margin-bottom:50px;
+}
+.fulldate .wrap{
+background-color: rgb(39,46,79,0.95);
+border-radius: 50px;
+}
+.fulldate p{
+color:white;
+}
+.kommende, .passert{
+margin-top:20px;
+margin-bottom:20px;
+position: relative;
+}
+.strike{
+text-decoration: line-through;
+}
+.h2date{
+color:white;
+margin-bottom:20px;
+}
