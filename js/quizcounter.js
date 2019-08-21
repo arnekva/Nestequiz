@@ -16,26 +16,33 @@ let quizTab = [date1, date2, date3, date4, date5, date6, date7];
 countDownDate = date1;
 let quizerIgjen = 0;
 let passertequizer = 0;
+let countIndex = 0;
 for(let i = 0; i<quizTab.length;i++){
   if(quizTab[i].getTime() <= now1.getTime()){
     countDownDate = quizTab[i+1];
     passertequizer++;
+    countIndex = i+1;
 } else{
   quizerIgjen++;
-
 }
 }
 if(quizerIgjen > 0){
-// Update the count down every 1 second
 let x = setInterval(function() {
-// Get todays date and time
+  let paagar;
+  if(passertequizer>0){
+  paagar = quizTab[countIndex-1];
+} else{
+  paagar = countDownDate;
+}
 let now = new Date().getTime();
-// Find the distance between now an the count down date
 let distance = countDownDate - now;
-if(distance<=0){
+if(distance<=-21600000){
   location.reload();
 }
-// Time calculations for days, hours, minutes and seconds
+if(distance<=0){
+  countDownDate = quizTab[countIndex+1];
+}
+
 let days = Math.floor(distance / (1000 * 60 * 60 * 24));
 let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -48,12 +55,13 @@ document.getElementById("minutes").innerHTML = minutes + " <small>minutter</smal
 document.getElementById("seconds").innerHTML = seconds + " <small>sekunder</small> ";
 document.getElementById("quizdate").innerHTML = dager[countDownDate.getDay()]+ " " + countDownDate.getDate() + ". " + maaneder[countDownDate.getMonth()];
 if(quizerIgjen > 1){
-document.getElementById("quizleft").innerHTML = "Det er " + quizerIgjen + " quizer igjen dette semesteret";
+  document.getElementById("quizleft").innerHTML = "Det er " + quizerIgjen + " quizer igjen dette semesteret";
 }else{
   document.getElementById("quizleft").innerHTML = "Dette er semesterets siste quiz";
 }
-}
-}, 1000);}
+if(paagar.getTime()-now<=0 && paagar.getTime()-now >= -21600000){
+ document.getElementById("quiznow").innerHTML = "Hva gjør du her? Det er quiz akkurat NÅ!";
+}}}, 1000);}
 
  else{
 document.getElementById("days").innerHTML = "X" +" <small>dager</small>";
@@ -64,7 +72,7 @@ document.getElementById("quizdate").innerHTML = "Det er ikke flere quizer dette 
 document.getElementById("quizleft").innerHTML = "Siden blir oppdatert så fort Kronbar publiserer datoene for neste semester";
 
 }
-
+//Kommende quizer
 if(quizerIgjen>0){
 var leggTil1 = document.createDocumentFragment();
 var newPassert = document.createElement('div');
@@ -94,7 +102,7 @@ for(var i=passertequizer; i < quizTab.length; i++){
 document.getElementById('kommende').appendChild(leggTil);
 }
 
-
+//Passerte quizer
 if(passertequizer>0){
 var leggTil1 = document.createDocumentFragment();
 var newPassert = document.createElement('div');
