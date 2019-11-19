@@ -16,6 +16,7 @@ let now1 = new Date(today.getFullYear(), today.getMonth(), today.getDate(), toda
 let quizTab = [date1, date2, date3, date4, date5, date6, date7, date8];
 countDownDate = date1;
 let quizerIgjen = 0;
+let passertequizer = 0;
 let countIndex = 0;
 for(let i = 0; i<quizTab.length;i++){
   if(quizTab[i].getTime() <= now1.getTime()){
