@@ -8,13 +8,11 @@ let date2 = new Date("Jan 23, 2020 18:00:00");
 let date3 = new Date("Feb 06, 2020 18:00:00");
 let date4 = new Date("Feb 20, 2020 18:00:00");
 let date5 = new Date("Mar 05, 2020 18:00:00");
-let date6 = new Date("Mar 05, 2020 18:00:00");
-let date7 = new Date("Mar 05, 2020 18:00:00");
 let date8 = new Date("Apr 16, 2020 18:00:00");
 let date9 = new Date("Apr 30, 2020 18:00:00");
 let today = new Date();
 let now1 = new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes(), today.getSeconds());
-let quizTab = [date1, date2, date3, date4, date5, date6, date7, date8, date9];
+let quizTab = [date1, date2, date3, date4, date5, date8, date9];
 countDownDate = date1;
 let quizerIgjen = 0;
 let passertequizer = 0;
@@ -57,8 +55,8 @@ document.getElementById("minutes").innerHTML = minutes + " <small>minutter</smal
 document.getElementById("seconds").innerHTML = seconds + " <small>sekunder</small> ";
 document.getElementById("quizdate").innerHTML = dager[countDownDate.getDay()]+ " " + countDownDate.getDate() + ". " + maaneder[countDownDate.getMonth()];
 if(quizerIgjen > 1){
-    document.getElementById("systemMessage").innerHTML = "Kronbar holder for øyeblikket stengt. Dato er tentativ, og kan bli avlyst :(";
-  document.getElementById("quizleft").innerHTML = "Det er (forhåpentligvis)" + quizerIgjen + " quizer igjen dette semesteret";
+    document.getElementById("systemMessage").innerHTML = "Kronbar holder for øyeblikket stengt.";
+  document.getElementById("quizleft").innerHTML = "Det er (forhåpentligvis) " + quizerIgjen + " quizer igjen dette semesteret";
 }else{
   document.getElementById("quizleft").innerHTML = "Dette er semesterets siste quiz";
 }
