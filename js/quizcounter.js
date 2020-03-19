@@ -57,7 +57,7 @@ document.getElementById("minutes").innerHTML = minutes + " <small>minutter</smal
 document.getElementById("seconds").innerHTML = seconds + " <small>sekunder</small> ";
 document.getElementById("quizdate").innerHTML = dager[countDownDate.getDay()]+ " " + countDownDate.getDate() + ". " + maaneder[countDownDate.getMonth()];
 if(quizerIgjen > 1){
-    document.getElementById("systemMessage").innerText = "Kronbar holder for øyeblikket stengt. Dato er tentativ, og kan bli avlyst :(";
+    document.getElementById("systemMessage").innerHTML = "Kronbar holder for øyeblikket stengt. Dato er tentativ, og kan bli avlyst :(";
   document.getElementById("quizleft").innerHTML = "Det er (forhåpentligvis)" + quizerIgjen + " quizer igjen dette semesteret";
 }else{
   document.getElementById("quizleft").innerHTML = "Dette er semesterets siste quiz";
